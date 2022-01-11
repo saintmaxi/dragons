@@ -276,6 +276,7 @@ provider.on("network", async(newNetwork, oldNetwork) => {
             $("#refresh-notification").remove();
             await updateCurrentChain();
             await updateClaimingInfo();
+            await getDragonImages();
         }
     });
 
