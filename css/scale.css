@@ -242,6 +242,7 @@ h2 {
     }
 
     #available-dragon-images, #available-elder-images, #available-baby-images {
+        width: 100%;
         text-align: center;
         display: -webkit-box;
         display: -webkit-flex;
@@ -263,7 +264,10 @@ h2 {
         -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
-        padding: 5px;
+    }
+
+    .box3 {
+        padding: 20px;
     }
 
     .your-dragon {
