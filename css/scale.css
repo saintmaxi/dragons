@@ -66,20 +66,18 @@ h2 {
     width: 75%;
 }    
 
-.scale-balance-container .button:hover {
-    background-color: #f0fcff;
-}
-
 #your-scale-container {
     margin-right: 2vw;
 }
 
-#your-yeti-section {
+#your-dragon-section {
     width:80vw;
     margin: auto;
+    text-align: center;
+    min-height:40vh;
 }
 
-#available-yeti-images {
+#available-dragon-images, #available-elder-images, #available-baby-images {
     text-align: center;
     display: -webkit-box;
     display: -webkit-flex;
@@ -101,103 +99,29 @@ h2 {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    min-height: 40vh;
 }
 
-.your-yeti {
+#genesis-label {
+    margin-bottom: 1vw;
+}
+
+#elder-label, #baby-label {
+    margin: 2vw;
+}
+
+.your-dragon {
     width: 17%;
     font-size: 1.3vw;
     margin: 10px;
 }
 
-.your-yeti img {
+.your-dragon img {
     border: 3px solid white;
 }
 
-.yeti-id {
+.dragon-id {
     text-align: center;
     margin-top: 5px;
-}
-
-
-#pending-transactions {
-    text-align: center;
-    min-width: 20%;
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 99999999;
-  }
-  
-.loading-div {
-    cursor: pointer;
-    width: 100%;
-    text-decoration: none;
-    height: 5%;
-    background-color: #D3F6FF;
-    border: solid black .3em;
-    color: black;
-    font-size: 1vw;
-    line-height: 1vw;
-    padding: 20px;
-    text-align: center;
-}
-
-.etherscan-link {
-    text-decoration: none;
-}
-
-#error-popup, #status-popup {
-	background-color: rgba(0,0,0);
-    z-index: 99999;
-    position:fixed;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 53vw;
-    height: 35vh;
-    border: solid .3em white;
-    border-radius: .2em;
-    text-align: center;
-    box-shadow: 0 0 5000px 5000px rgba(0,0,0,0.88);
-}
-
-#error-popup p, #status-popup p {
-    width: 100%;
-    font-size: 3vw;
-    line-height: 3vw;
-    position: absolute;
-    color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-@keyframes blinker {
-    50% {
-      opacity: 0;
-    }
-}
-
-.blinking {
-    animation: blinker 1.6s linear infinite;
-}
-
-.success {
-    background-color: rgb(49, 219, 49) !important;
-}
-
-.failure {
-    background-color: #F72119 !important;
-}
-
-#block-screen, #block-screen-error, #block-screen-status, #block-screen-approval {
-    z-index: 9998;
-    width: 100vw;
-    opacity: 0;
-    position: absolute;
-    top: 0;
 }
 
 .hide-on-desktop {
@@ -254,6 +178,15 @@ h2 {
 
 @media screen and (max-width: 991px) {
 
+    #genesis-label, #elder-label, #baby-label {
+        font-size: 1.9vh !important;
+        line-height: 2.7vh !important;
+    }
+
+    .no-dragons-msg {
+        font-size: 1.5vh !important;
+    }
+
     .hide-on-desktop {
         display: block !important;
     }
@@ -302,12 +235,13 @@ h2 {
         margin-right: initial;
     }
 
-    #your-yeti-section {
+    #your-dragon-section {
         width:95vw;
+        min-height: 0;
         margin: auto;
     }
 
-    #available-yeti-images {
+    #available-dragon-images, #available-elder-images, #available-baby-images {
         text-align: center;
         display: -webkit-box;
         display: -webkit-flex;
@@ -329,11 +263,10 @@ h2 {
         -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
-        min-height: 0;
         padding: 5px;
     }
 
-    .your-yeti {
+    .your-dragon {
         width: 41%;
     }
 
