@@ -11,15 +11,28 @@ h1, h2 {
     right: 17px;
 }
 
-#plasma-description {
-    margin:auto;
-    text-align: center;
-    width: 55%;
-    font-size: 1.4vw;
-    line-height: 1.4vw;
+button {
+    font-size: 1vw !important;
 }
 
-#plasma-balances {
+#top {
+    padding-bottom: 5px !important;
+}
+
+#scale-description {
+    margin:auto;
+    text-align: center;
+    font-family: 'Pixel';
+    width: 65%;
+    font-size: 1.4vw !important;
+    line-height: 1.6vw !important;
+}
+
+h2 {
+    font-size: 1.5vw;
+}
+
+#scale-balances {
     text-align: center;
     display: -webkit-box;
     display: -webkit-flex;
@@ -43,21 +56,21 @@ h1, h2 {
     align-items: center;
 }
 
-.plasma-balance-container {
+.scale-balance-container {
     padding: 10px;
     margin-bottom: 10px;
     width: 39vw;
 }
 
-.plasma-balance-container button {
-    width: 65%;
+.scale-balance-container button {
+    width: 75%;
 }    
 
-.plasma-balance-container .button:hover {
+.scale-balance-container .button:hover {
     background-color: #f0fcff;
 }
 
-#your-plasma-container {
+#your-scale-container {
     margin-right: 2vw;
 }
 
@@ -254,28 +267,38 @@ h1, h2 {
         margin-top: 10px;
     }
 
-    #plasma-description {
+    #scale-description {
         margin:auto;
         text-align: center;
         width: 95%;
-        font-size: 2.5vh;
-        line-height: 2.5vh;
+        font-size: 2.5vh !important;
+        line-height: 2.5vh !important;
     }
 
-    .plasma-balance-container {
+    h2 {
+        font-size: 2.7vh !important;
+        line-height: 2.7vh !important; 
+    }
+
+    button {
+        font-size: 1.7vh !important;
+        line-height: 1.7vh !important;
+    }
+
+    .scale-balance-container {
         width: 95vw;
     }
 
-    .plasma-balance-container h2 {
+    .scale-balance-container h2 {
         font-size: 3vh;
     }    
 
-    .plasma-balance-container button {
+    .scale-balance-container button {
         width: 95%;
         font-size: 2.5vh;
     }    
 
-    #your-plasma-container {
+    #your-scale-container {
         margin-right: initial;
     }
 
