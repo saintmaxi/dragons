@@ -72,7 +72,7 @@ const correctChain = 4;
 if (window.ethereum == undefined) {
     displayErrorMessage('Use a web3 enabled browser with MetaMask or the MetaMask mobile app to claim $SCALE!');
     $("#available-dragon-images").empty();
-    $("#available-dragon-images").append("<br><p>No dragons available...</p>");
+    $("#available-dragon-images").append("<br><p class='no-dragons-msg'>No dragons available...</p>");
 }
 
 const provider = new ethers.providers.Web3Provider(window.ethereum,"any");
