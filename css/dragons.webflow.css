@@ -958,6 +958,7 @@ h4 {
 	.baby-sleep-img {
 		width: 150px;
 		margin-top: 0;
+		z-index: 1000000;
 	}
 
 	.baby-img-container-left {
