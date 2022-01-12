@@ -46,12 +46,6 @@ p {
 	text-shadow: 2px 2px black;
 }
 
-#main-yeti {
-	float: left; 
-    margin: 10px;
-	padding: 30px;
-}
-
 #logo {
 	position: absolute;
     display: inline;
@@ -724,13 +718,6 @@ h4 {
 		margin-top: 13vh;
 	}
 
-	#main-yeti{
-		width: 90%;
-		margin-left: 5%;
-		margin-right: 5%;
-		border: 3px solid white;
-	}
-
 	#roadmap, #team, #inner-roadmap, #faq {
 		padding: 5px;
 	}
@@ -756,11 +743,6 @@ h4 {
 .team {
 	margin-top: 5px;
 	margin-bottom: 0px;
-}
-
-.yeti-title{
-	margin-top: 0px;
-	padding-top: 0px;
 }
 
 @media only screen and (max-width: 720px) {
@@ -996,8 +978,8 @@ h4 {
 	}
 
 	.increment-button {
-        font-size:9vh;
-		line-height:9vh;
+        font-size:7vh;
+		line-height:7vh;
     }
 
 	#mint-button, #connect-button {

@@ -41,12 +41,6 @@ const correctChain = 4;
 
 /*********************************END CONFIG************************************/
 
-// if (window.ethereum == undefined) {
-//     displayErrorMessage('Use a web3 enabled browser with MetaMask or the MetaMask mobile app to claim $PLASMA!');
-//     $("#available-yeti-images").empty();
-//     $("#available-yeti-images").append("<br><p>No yetis available...</p>");
-// }
-
 const provider = new ethers.providers.Web3Provider(window.ethereum,"any");
 const signer = provider.getSigner();
 const dragons = new ethers.Contract(dragonsAddress, dragonsAbi(), signer);

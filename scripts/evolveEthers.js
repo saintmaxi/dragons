@@ -56,7 +56,7 @@ const correctChain = 4;
 /*********************************END CONFIG************************************/
 
 if (window.ethereum == undefined) {
-    displayErrorMessage('Use a web3 enabled browser with MetaMask or the MetaMask mobile app to claim $SCALE!');
+    displayErrorMessage('Use a web3 enabled browser with MetaMask or the MetaMask mobile app to evolve!');
     $("#available-dragon-images").empty();
     $("#available-dragon-images").append("<br><p>No dragons available...</p>");
 }
