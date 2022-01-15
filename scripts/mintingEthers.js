@@ -102,7 +102,7 @@ const mint = async () => {
     catch (error) {
         await displayErrorMessage("An error occurred. See console output or window alert for more info...")
         console.log(error);
-        window.alert(error);
+        window.alert(`Message saintmaxi#9215 on Discord with this error: ${error}`);
     }
 };
 
