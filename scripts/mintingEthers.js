@@ -73,7 +73,7 @@ const mint = async () => {
         const minted = Number(await dragons.totalSupply());
 
         if (minted == 3333) {
-            await displayErrorMessage("Sorry, 0xDragons have minted out!")
+            await displayErrorMessage("Sorry, no eggs remaining!")
         }
         else {
             const numberToMint = Number($("#number-to-mint").text());
@@ -216,7 +216,7 @@ const checkSoldOut = async() => {
         $("#cost-div").remove();
         $("#amount-controller").remove();
         $("#mint-button").remove();
-        $("#mint-tools").append(`<p style="text-align:center">SOLD OUT!</p>`);
+        $("#mint-tools").append(`<p style="text-align:center">No eggs remaining!</p>`);
     }
 }
 
