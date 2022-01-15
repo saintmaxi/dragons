@@ -81,6 +81,9 @@ const mint = async () => {
             if (numberToMint > MAX_MINT) {
                 await displayErrorMessage("Max 10 0xDragons per transaction!")
             }
+            else if (numberToMint + minted > 3333) {
+                await displayErrorMessage("Mint amount would exceed max supply!")
+            }
             else {
                 let cost;
                 if (minted >= 200) {
