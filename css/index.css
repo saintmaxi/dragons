@@ -17,6 +17,11 @@
         margin-top: 10px;
     }
 
+    #about-info {
+        font-size: 2.8vh !important;
+        line-height: 3.3vh !important;
+    }
+
 }
 
 @keyframes blinker {
@@ -76,5 +81,10 @@
     100% {
         opacity: 1;
     }
+  }
+
+  #about-info {
+      font-size: 1.7vw;
+      line-height: 2.1vw;
   }
 

@@ -39,8 +39,8 @@
             <a href="./breed.html" class="link w-inline-block">
                <div class="header-menu">BREED</div>
             </a>
-            <a href="./evolve.html" class="link w-inline-block">
-               <div class="header-menu">EVOLVE</div>
+            <a href="./sacrifice.html" class="link w-inline-block">
+               <div class="header-menu">SACRIFICE</div>
             </a>
          </div>
       </div>
@@ -50,30 +50,30 @@
    </div>
    <button class="button hide-on-mobile" id="account" href="#" class="clickable" onclick=connect()>CONNECT</button>
    <h1 class="section-title">SCALE HARVEST</h1>
-   <p id="scale-description"> $SCALE is an ERC20 utility token used within the 0xDragonCult Ecosystem. Dragons generate $SCALE passively, without staking. Genesis dragons generate 10 $SCALE per day, babies generate 5 $SCALE, and elders generate 50 $SCALE.</p>
+   <p id="scale-description"> $SCALE is an ERC20 utility token used within the 0xDragonCult ecosystem. Dragons generate $SCALE passively, without staking. 0xDragons generate 10 $SCALE per day, Wyrmlings generate 5 $SCALE, and Ancients generate 50 $SCALE.</p>
    <br>
    <div id="scale-balances">
       <div id="your-scale-container" class="box scale-balance-container">
          <h2>Your $SCALE</h2>
-         <h2><span id="your-scale">0.0</span><img src='./images/scale.png' width=32 style="margin-bottom:6px;margin-left:5px"></h2>
+         <h2><span id="your-scale"><span class="one">.</span><span class="two">.</span><span class="three">.</span></span><img src='./images/scale.png' width=32 style="margin-bottom:6px;margin-left:5px"></h2>
          <button class="button" onclick="importScaleToWallet()">Import $SCALE to Wallet </button>
       </div>
       <div class="box scale-balance-container"> 
          <h2>Claimable $SCALE</h2>
-         <h2><span id="claimable-scale">0.0</span><img src='./images/scale.png' width=32 style="margin-bottom:6px;margin-left:5px"></h2>
+         <h2><span id="claimable-scale"><span class="one">.</span><span class="two">.</span><span class="three">.</span></span><img src='./images/scale.png' width=32 style="margin-bottom:6px;margin-left:5px"></h2>
          <button class=" button" onclick="claimScale()">Claim $SCALE </button>
       </div>
    </div>
    <h1 class="section-title">YOUR HORDE</h1>
    <div id="your-dragon-section" class="container box3">
-      <h2 id="genesis-label" class="hidden">Genesis Dragons <span id="num-genesis">(<span class="one">.</span><span class="two">.</span><span class="three">.</span>)</span></h2>
+      <h2 id="genesis-label" class="hidden">0xDragons <span id="num-genesis">(<span class="one">.</span><span class="two">.</span><span class="three">.</span>)</span></h2>
       <div id="available-dragon-images" style="margin-top:0;width:100%;">
-         <h3>Searching for Dragons <span class="one">.</span><span class="two">.</span><span class="three">.</span></h3>
+         <h3>Searching for 0xDragons <span class="one">.</span><span class="two">.</span><span class="three">.</span></h3>
       </div>
-      <h2 id="elder-label" class="hidden">Elder Dragons <span id="num-elders">(<span class="one">.</span><span class="two">.</span><span class="three">.</span>)</span></h2>
+      <h2 id="elder-label" class="hidden">Ancient Dragons <span id="num-elders">(<span class="one">.</span><span class="two">.</span><span class="three">.</span>)</span></h2>
       <div id="available-elder-images" style="margin-top:0;width:100%;">
       </div>
-      <h2 id="baby-label" class="hidden">Baby Dragons <span id="num-babies">(<span class="one">.</span><span class="two">.</span><span class="three">.</span>)</span></h2>
+      <h2 id="baby-label" class="hidden">Wyrmling Dragons <span id="num-babies">(<span class="one">.</span><span class="two">.</span><span class="three">.</span>)</span></h2>
       <div id="available-baby-images" style="margin-top:0;width:100%;">
       </div>
    </div>
