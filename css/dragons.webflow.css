@@ -5,7 +5,10 @@
 
 @font-face {  
 	font-family: 'Pixel';
-	src: URL('../css/ConnectionIi-2wj8.otf') format('truetype');
+	/* src: URL('../css/ConnectionIi-2wj8.otf') format('truetype');
+	 */
+	src: URL('../css/Connection-arMJ.otf') format('truetype');
+
 }  
 
 .w-layout-grid {
