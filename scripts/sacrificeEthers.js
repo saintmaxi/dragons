@@ -203,14 +203,15 @@ const updateEvolutionInfo = async()=>{
 // Dragon selection
 
 let dragonImages = new Map();
+let dragonsInWallet = [];
 let dragonImageSelectLoaded = false;
 
 // Load select display
 const loadDragonImages = async() => {
     if (!dragonImageSelectLoaded) {
-        const dragonsOwned = await getDragonsOwned();
-        for (let i = 0; i < dragonsOwned.length; i++) {
-            let id = Number(dragonsOwned[i]);
+        dragonsInWallet = await getDragonsOwned();
+        for (let i = 0; i < dragonsInWallet.length; i++) {
+            let id = Number(dragonsInWallet[i]);
             dragonImages.set(id, `${baseDragonImageURI}${id}.png`);
         }
     
@@ -245,9 +246,14 @@ async function selectForAction(id, num) {
 
 const displayDragonSelect = async(num) => {
     const currentlySelected = selectedForAction;
-    let dragonsOwned = await getDragonsOwned();
+    let dragonsOwned = dragonsInWallet;
     if (dragonsOwned.length == 0) {
-        await displayErrorMessage(`You do not have any 0xDragons!`);
+        if (dragonImageSelectLoaded) {
+            await displayErrorMessage(`You do not have any 0xDragons!`);
+        }
+        else {
+            await displayErrorMessage(`Still loading 0xDragons! Try again in a moment...`);
+        }
     }
     else {
         let dragonsJSX = "";
@@ -284,13 +290,14 @@ const displayDragonSelect = async(num) => {
 const loadSelectedParents = async() => {
     $("#burn-1").empty();
     $("#burn-2").empty();
+    $("#burn-3").empty();
     const selected = Array.from(selectedForAction);
     for (let i = 0; i < selected.length; i++) {
         let id = selected[i];
         $(`#burn-${i+1}`).html(`<div><img src="${dragonImages.get(id)}"><h2>${id}</h2></div>`);
     }
-    if (selected.length < 2) {
-        for (let j = selected.length; j < 2; j++) {
+    if (selected.length < 3) {
+        for (let j = selected.length; j < 3; j++) {
             $(`#burn-${j+1}`).html(`<div><img src="./images/blur.png" style="background-color:rgb(170, 169, 169)"><h2>???</h2></div>`);
         }
     }

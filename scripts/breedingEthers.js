@@ -198,14 +198,15 @@ const updateBreedingInfo = async()=>{
 // Dragon selection
 
 let dragonImages = new Map();
+let dragonsInWallet = [];
 let dragonImageSelectLoaded = false;
 
 // Load select display
 const loadDragonImages = async() => {
     if (!dragonImageSelectLoaded) {
-        const dragonsOwned = await getDragonsOwned();
-        for (let i = 0; i < dragonsOwned.length; i++) {
-            let id = Number(dragonsOwned[i]);
+        dragonsInWallet = await getDragonsOwned();
+        for (let i = 0; i < dragonsInWallet.length; i++) {
+            let id = Number(dragonsInWallet[i]);
             dragonImages.set(id, `${baseDragonImageURI}${id}.png`);
         }
     
@@ -240,9 +241,14 @@ async function selectForAction(id, num) {
 
 const displayDragonSelect = async(num) => {
     const currentlySelected = selectedForAction;
-    let dragonsOwned = await getDragonsOwned();
+    let dragonsOwned = dragonsInWallet;
     if (dragonsOwned.length == 0) {
-        await displayErrorMessage(`You do not have any 0xDragons!`);
+        if (dragonImageSelectLoaded) {
+            await displayErrorMessage(`You do not have any 0xDragons!`);
+        }
+        else {
+            await displayErrorMessage(`Still loading 0xDragons! Try again in a moment...`);
+        }
     }
     else {
         let dragonsJSX = "";
