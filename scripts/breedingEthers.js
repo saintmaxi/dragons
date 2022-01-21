@@ -228,7 +228,7 @@ async function selectForAction(id, num) {
         $(`#dragon-${id}`).removeClass("selected");
     }
     if (selectedForAction.size == 0) {
-        $(`.selected-dragon`).text("Selected: None");
+        $(`.selected-dragons`).text("Selected: None");
     }
     else {
         let selectedString = `${Array.from(selectedForAction).sort((a, b) => a - b).join(' ')}`;
