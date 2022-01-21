@@ -267,7 +267,7 @@ const displayDragonSelect = async(num) => {
             dragonsJSX += `<div class='dragon-div ${selected}' id="dragon-${id}" onclick="selectForAction(${id}, ${num})"><img src="${img}"><h2>${id}</h2></div>`
         }
     
-        let fakeJSX = `<div id="dragon-select"><h1 class="section-title">SELECT PARENTS</h1><br><div id="available-dragons"><div id="close-div"><span id="close" onclick='closeDisplay()'>x</span></div>${dragonsJSX}</div><div id='bottom-div'><div class="selected-dragons" id="selected-dragons-big">Selected: None</div><br class="hide-on-mobile"><button class="button" id='confirm' onclick="closeDisplay()">CONFIRM</button></div></div>`;
+        let fakeJSX = `<div id="dragon-select"><div style="position:relative;height:100%;"><h1 class="section-title">SELECT PARENTS</h1><br><div id="available-dragons"><div id="close-div"><span id="close" onclick='closeDisplay()'>x</span></div>${dragonsJSX}</div><div id='bottom-div'><div class="selected-dragons" id="selected-dragons-big">Selected: None</div><br class="hide-on-mobile"><button class="button" id='confirm' onclick="closeDisplay()">CONFIRM</button></div></div></div>`;
         let height = $(document).height();
         $("body").append(`<div id='block-screen' style="height:${height}px" onclick='closeDisplay()'></div>`);
         $("body").append(fakeJSX);
