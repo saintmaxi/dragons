@@ -221,11 +221,13 @@ const getDragonImages = async()=>{
     }
     else {
         const yourDragons = await getDragonsOwned();
+        let batchDragonJSX = "";
         for (let i = 0; i < yourDragons.length; i++) {
             let dragonId = yourDragons[i];
             let fakeJSX = `<div id="dragon-${dragonId}" class="your-dragon"><img src="${baseDragonImageURI}${dragonId}.png"><p class="dragon-id">#${dragonId}</p></div>`
-            $("#available-dragon-images").append(fakeJSX);
+            batchDragonJSX += fakeJSX;
         };
+        $("#available-dragon-images").append(batchDragonJSX);
     }
 
     const yourEldersCount = await getEldersEnum();
@@ -235,11 +237,13 @@ const getDragonImages = async()=>{
     }
     else {
         const yourElders = await getEldersOwned();
+        let batchElderJSX = "";
         for (let i = 0; i < yourElders.length; i++) {
             let elderId = yourElders[i];
             let fakeJSX = `<div id="elder-${elderId}" class="your-dragon"><img src="${baseElderImageURI}${elderId}.png"><p class="dragon-id">#${elderId}</p></div>`
-            $("#available-elder-images").append(fakeJSX);
+            batchElderJSX += fakeJSX;
         };
+        $("#available-elder-images").append(batchElderJSX);        
     }
 
     const yourBabiesCount = await getBabiesEnum();
@@ -249,11 +253,13 @@ const getDragonImages = async()=>{
     }
     else {
         const yourBabies = await getBabiesOwned();
+        let batchBabyJSX = "";
         for (let i = 0; i < yourBabies.length; i++) {
             let babyId = yourBabies[i];
             let fakeJSX = `<div id="baby-${babyId}" class="your-dragon"><img src="${baseBabyImageURI}${babyId}.png"><p class="dragon-id">#${babyId}</p></div>`
-            $("#available-baby-images").append(fakeJSX);
+            batchBabyJSX += fakeJSX;
         };
+        $("#available-baby-images").append(batchBabyJSX);
     }
 
     loadedDragonImages = true;

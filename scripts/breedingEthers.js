@@ -165,11 +165,13 @@ const getDragonImages = async()=>{
     }
     else {
         const yourBabies = await getBabiesOwned();
+        let batchBabyJSX = "";
         for (let i = 0; i < yourBabies.length; i++) {
             let babyId = yourBabies[i];
             let fakeJSX = `<div id="baby-${babyId}" class="your-dragon"><img src="${baseBabyImageURI}${babyId}.png"><p class="dragon-id">#${babyId}</p></div>`
-            $("#available-baby-images").append(fakeJSX);
+            batchBabyJSX += fakeJSX;
         };
+        $("#available-baby-images").append(batchBabyJSX);
     }
 
 };

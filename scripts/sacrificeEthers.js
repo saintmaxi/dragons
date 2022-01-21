@@ -170,11 +170,13 @@ const getDragonImages = async()=>{
     }
     else {
         const yourElders = await getEldersOwned();
+        let batchElderJSX = "";
         for (let i = 0; i < yourElders.length; i++) {
             let elderId = yourElders[i];
             let fakeJSX = `<div id="elder-${elderId}" class="your-dragon"><img src="${baseElderImageURI}${elderId}.png"><p class="dragon-id">#${elderId}</p></div>`
-            $("#available-elder-images").append(fakeJSX);
+            batchElderJSX += fakeJSX;
         };
+        $("#available-elder-images").append(batchElderJSX);        
     }
 
 };
