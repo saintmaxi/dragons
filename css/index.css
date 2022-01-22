@@ -30,6 +30,10 @@
     }
 }
 
+#max-button {
+    margin-top: .75vw;
+}
+
 .blinking {
     animation: blinker 1.6s linear infinite;
 }
