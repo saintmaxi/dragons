@@ -399,6 +399,7 @@ h2 {
 
     #select-parents-button, #breed-button {
         width: 93%;
+        padding: 20px;
     }
 
     #parents, #breed-controls {

@@ -401,6 +401,7 @@ h2 {
 
     #select-tributes-button, #burn-button {
         width: 93%;
+        padding: 20px;
     }
 
     #tributes, #breed-controls {
