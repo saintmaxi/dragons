@@ -149,9 +149,14 @@ const burn = async() => {
             });
         }
         catch (error) {
-            await displayErrorMessage("An error occurred! See console output or window alert...");
-            console.log(error);
-            window.alert(error);
+            if ((error.message).includes("not owner of this dragon")) {
+                await displayErrorMessage("Error: You've burned these dragons already! Please refresh the page.");
+            }
+            else {
+                await displayErrorMessage("An error occurred! See console output or window alert...");
+                console.log(error);
+                window.alert(error);
+            }
         }
     }
 }
