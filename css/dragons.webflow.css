@@ -542,7 +542,12 @@ h2 {
 
 h4 {
 	font-size:  1.4vw;
-	line-height:  1.4vw;
+	line-height:  1.8vw;
+}
+
+h5 {
+	font-size:  1vw !important;
+	line-height:  1.3vw !important;
 }
 
 .grid-3 {
@@ -945,7 +950,12 @@ h4 {
 
 	h4 {
 		font-size:  2.5vh;
-		line-height:  2.5vh;
+		line-height:  3.2vh;
+	}
+
+	h5 {
+		font-size:  2vh !important;
+		line-height:  2.3vh !important;
 	}
 
 	.baby-sleep-img {
