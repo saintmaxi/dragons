@@ -200,7 +200,7 @@ const checkSoldOut = async() => {
         $("#cost-div").remove();
         $("#amount-controller").remove();
         $("#mint-button").remove();
-        $("#mint-tools").append(`<p style="text-align:center">No eggs remaining!</p>`);
+        $("#mint-tools").append(`<p style="text-align:center">No eggs remaining!<br>Buy on <a class="link" target="_blank" href="https://opensea.io/collection/0xdragons">OpenSea⬈</a> or <a class="link" target="_blank" href="https://looksrare.org/collections/0xC0c7Eb8E88e7244F7C3569E483ad891F5a508a60">LooksRare⬈</a></p>`);
     }
 }
 
