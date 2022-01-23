@@ -263,7 +263,7 @@ h2 {
 }
 
 .selected img {
-    border-color: red !important;
+    border: solid 5px red !important;
 }
 
 #dragon-select {
@@ -328,7 +328,6 @@ h2 {
   }
   
   .dragon-div img {
-    border: solid 5px white;
     width: 100%;
     height: 100%;
   }

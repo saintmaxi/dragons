@@ -9,8 +9,6 @@
 
 // const etherscanBase = `https://etherscan.io/tx/`;
 
-// const baseImageURI = "";
-
 // const correctChain = 1;
 
 const MAX_MINT = 10;
@@ -25,8 +23,6 @@ const dragonsAbi = () => {
 };
 
 const etherscanBase = `https://rinkeby.etherscan.io/tx/`;
-
-const baseImageURI = "https://ipfs.io/ipfs/QmdznjRewr1HAjqgemhaoHSuM88bs8YJvi55gS6LJ9CptH/";
 
 const correctChain = 4;
     

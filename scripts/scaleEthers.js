@@ -24,11 +24,11 @@
 
 // const etherscanBase = `https://etherscan.io/tx/`;
 
-// const baseDragonImageURI = "";
+// const baseDragonImageURI = "https://ipfs.io/ipfs/QmUwrAd3uRMTm9AHZnJz5a2TSvNAoNvPe5F9uuYi1i6X8a/";
 
-// const baseElderImageURI = "";
+// const baseBabyImageURI = "https://ipfs.io/ipfs/QmdJAUPAcYUVqyqGebUw33tK2bkdkaJYr3sgsATGf436ta/";
 
-// const baseBabyImageURI = "";
+// const baseElderImageURI = "https://ipfs.io/ipfs/QmQPVxvop9q9oWEYXpLapPFUt8kwScMb4ACKppEqxcqcyx/";
 
 // const correctChain = 1;
 
@@ -58,11 +58,11 @@ const babiesAbi = () => {
 
 const etherscanBase = `https://rinkeby.etherscan.io/tx/`;
 
-const baseDragonImageURI = "https://ipfs.io/ipfs/QmdznjRewr1HAjqgemhaoHSuM88bs8YJvi55gS6LJ9CptH/";
+const baseDragonImageURI = "https://ipfs.io/ipfs/QmUwrAd3uRMTm9AHZnJz5a2TSvNAoNvPe5F9uuYi1i6X8a/";
 
-const baseElderImageURI = "https://ipfs.io/ipfs/QmdznjRewr1HAjqgemhaoHSuM88bs8YJvi55gS6LJ9CptH/";
+const baseBabyImageURI = "https://ipfs.io/ipfs/QmdJAUPAcYUVqyqGebUw33tK2bkdkaJYr3sgsATGf436ta/";
 
-const baseBabyImageURI = "https://ipfs.io/ipfs/QmdznjRewr1HAjqgemhaoHSuM88bs8YJvi55gS6LJ9CptH/";
+const baseElderImageURI = "https://ipfs.io/ipfs/QmQPVxvop9q9oWEYXpLapPFUt8kwScMb4ACKppEqxcqcyx/";
 
 const correctChain = 4;
     
@@ -224,7 +224,7 @@ const getDragonImages = async()=>{
         let batchDragonJSX = "";
         for (let i = 0; i < yourDragons.length; i++) {
             let dragonId = yourDragons[i];
-            let fakeJSX = `<div id="dragon-${dragonId}" class="your-dragon"><img src="${baseDragonImageURI}${dragonId}.png"><p class="dragon-id">#${dragonId}</p></div>`
+            let fakeJSX = `<div id="dragon-${dragonId}" class="your-dragon"><img src="${baseDragonImageURI}${dragonId}.gif"><p class="dragon-id">#${dragonId}</p></div>`
             batchDragonJSX += fakeJSX;
         };
         $("#available-dragon-images").append(batchDragonJSX);
@@ -240,7 +240,7 @@ const getDragonImages = async()=>{
         let batchElderJSX = "";
         for (let i = 0; i < yourElders.length; i++) {
             let elderId = yourElders[i];
-            let fakeJSX = `<div id="elder-${elderId}" class="your-dragon"><img src="${baseElderImageURI}${elderId}.png"><p class="dragon-id">#${elderId}</p></div>`
+            let fakeJSX = `<div id="elder-${elderId}" class="your-dragon"><img src="${baseElderImageURI}${elderId}.gif"><p class="dragon-id">#${elderId}</p></div>`
             batchElderJSX += fakeJSX;
         };
         $("#available-elder-images").append(batchElderJSX);        
@@ -256,7 +256,7 @@ const getDragonImages = async()=>{
         let batchBabyJSX = "";
         for (let i = 0; i < yourBabies.length; i++) {
             let babyId = yourBabies[i];
-            let fakeJSX = `<div id="baby-${babyId}" class="your-dragon"><img src="${baseBabyImageURI}${babyId}.png"><p class="dragon-id">#${babyId}</p></div>`
+            let fakeJSX = `<div id="baby-${babyId}" class="your-dragon"><img src="${baseBabyImageURI}${babyId}.gif"><p class="dragon-id">#${babyId}</p></div>`
             batchBabyJSX += fakeJSX;
         };
         $("#available-baby-images").append(batchBabyJSX);

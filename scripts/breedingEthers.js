@@ -19,9 +19,9 @@
 
 // const etherscanBase = `https://etherscan.io/tx/`;
 
-// const baseDragonImageURI = "";
+// const baseDragonImageURI = "https://ipfs.io/ipfs/QmUwrAd3uRMTm9AHZnJz5a2TSvNAoNvPe5F9uuYi1i6X8a/";
 
-// const baseBabyImageURI = "";
+// const baseBabyImageURI = "https://ipfs.io/ipfs/QmdJAUPAcYUVqyqGebUw33tK2bkdkaJYr3sgsATGf436ta/";
 
 // const correctChain = 1;
 
@@ -46,9 +46,9 @@ const babiesAbi = () => {
 
 const etherscanBase = `https://rinkeby.etherscan.io/tx/`;
 
-const baseDragonImageURI = "https://ipfs.io/ipfs/QmdznjRewr1HAjqgemhaoHSuM88bs8YJvi55gS6LJ9CptH/";
+const baseDragonImageURI = "https://ipfs.io/ipfs/QmUwrAd3uRMTm9AHZnJz5a2TSvNAoNvPe5F9uuYi1i6X8a/";
 
-const baseBabyImageURI = "https://ipfs.io/ipfs/QmdznjRewr1HAjqgemhaoHSuM88bs8YJvi55gS6LJ9CptH/";
+const baseBabyImageURI = "https://ipfs.io/ipfs/QmdJAUPAcYUVqyqGebUw33tK2bkdkaJYr3sgsATGf436ta/";
 
 const correctChain = 4;
     
@@ -167,7 +167,7 @@ const getDragonImages = async()=>{
         let batchBabyJSX = "";
         for (let i = 0; i < yourBabies.length; i++) {
             let babyId = yourBabies[i];
-            let fakeJSX = `<div id="baby-${babyId}" class="your-dragon"><img src="${baseBabyImageURI}${babyId}.png"><p class="dragon-id">#${babyId}</p></div>`
+            let fakeJSX = `<div id="baby-${babyId}" class="your-dragon"><img src="${baseBabyImageURI}${babyId}.gif"><p class="dragon-id">#${babyId}</p></div>`
             batchBabyJSX += fakeJSX;
         };
         $("#available-baby-images").append(batchBabyJSX);
@@ -206,7 +206,7 @@ const loadDragonImages = async() => {
         dragonsInWallet = await getDragonsOwned();
         for (let i = 0; i < dragonsInWallet.length; i++) {
             let id = Number(dragonsInWallet[i]);
-            dragonImages.set(id, `${baseDragonImageURI}${id}.png`);
+            dragonImages.set(id, `${baseDragonImageURI}${id}.gif`);
         }
     
         dragonImageSelectLoaded = true;

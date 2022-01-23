@@ -19,9 +19,9 @@
 
 // const etherscanBase = `https://etherscan.io/tx/`;
 
-// const baseDragonImageURI = "";
+// const baseDragonImageURI = "https://ipfs.io/ipfs/QmUwrAd3uRMTm9AHZnJz5a2TSvNAoNvPe5F9uuYi1i6X8a/";
 
-// const baseElderImageURI = "";
+// const baseElderImageURI = "https://ipfs.io/ipfs/QmQPVxvop9q9oWEYXpLapPFUt8kwScMb4ACKppEqxcqcyx/";
     
 // const correctChain = 1;
 
@@ -46,9 +46,9 @@ const eldersAbi = () => {
 
 const etherscanBase = `https://rinkeby.etherscan.io/tx/`;
 
-const baseDragonImageURI = "https://ipfs.io/ipfs/QmdznjRewr1HAjqgemhaoHSuM88bs8YJvi55gS6LJ9CptH/";
+const baseDragonImageURI = "https://ipfs.io/ipfs/QmUwrAd3uRMTm9AHZnJz5a2TSvNAoNvPe5F9uuYi1i6X8a/";
 
-const baseElderImageURI = "https://ipfs.io/ipfs/QmdznjRewr1HAjqgemhaoHSuM88bs8YJvi55gS6LJ9CptH/";
+const baseElderImageURI = "https://ipfs.io/ipfs/QmQPVxvop9q9oWEYXpLapPFUt8kwScMb4ACKppEqxcqcyx/";
 
 const correctChain = 4;
     
@@ -177,7 +177,7 @@ const getDragonImages = async()=>{
         let batchElderJSX = "";
         for (let i = 0; i < yourElders.length; i++) {
             let elderId = yourElders[i];
-            let fakeJSX = `<div id="elder-${elderId}" class="your-dragon"><img src="${baseElderImageURI}${elderId}.png"><p class="dragon-id">#${elderId}</p></div>`
+            let fakeJSX = `<div id="elder-${elderId}" class="your-dragon"><img src="${baseElderImageURI}${elderId}.gif"><p class="dragon-id">#${elderId}</p></div>`
             batchElderJSX += fakeJSX;
         };
         $("#available-elder-images").append(batchElderJSX);        
@@ -215,7 +215,7 @@ const loadDragonImages = async() => {
     dragonsInWallet = await getDragonsOwned();
     for (let i = 0; i < dragonsInWallet.length; i++) {
         let id = Number(dragonsInWallet[i]);
-        dragonImages.set(id, `${baseDragonImageURI}${id}.png`);
+        dragonImages.set(id, `${baseDragonImageURI}${id}.gif`);
     }
 
     dragonImageSelectLoaded = true;
