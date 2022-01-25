@@ -25,6 +25,8 @@ const baseElderImageURI = "https://ipfs.io/ipfs/QmQPVxvop9q9oWEYXpLapPFUt8kwScMb
     
 const correctChain = 1;
 
+const legendaries = [1,2,3];
+
 /*********************************************************************************/
 /***********************************DEV CONFIG************************************/
 /*********************************************************************************/
@@ -215,7 +217,14 @@ const loadDragonImages = async() => {
     dragonsInWallet = await getDragonsOwned();
     for (let i = 0; i < dragonsInWallet.length; i++) {
         let id = Number(dragonsInWallet[i]);
-        dragonImages.set(id, `${baseDragonImageURI}${id}.png`);
+        let extension;
+        if (legendaries.includes(id)) {
+            extension = "gif";
+        }
+        else {
+            extension = "png";
+        }
+        dragonImages.set(id, `${baseDragonImageURI}${id}.${extension}`);
     }
 
     dragonImageSelectLoaded = true;

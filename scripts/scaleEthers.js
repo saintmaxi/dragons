@@ -32,6 +32,8 @@ const baseElderImageURI = "https://ipfs.io/ipfs/QmQPVxvop9q9oWEYXpLapPFUt8kwScMb
 
 const correctChain = 1;
 
+const legendaries = [1,2,3];
+
 /*********************************************************************************/
 /***********************************DEV CONFIG************************************/
 /*********************************************************************************/
@@ -223,8 +225,15 @@ const getDragonImages = async()=>{
         const yourDragons = await getDragonsOwned();
         let batchDragonJSX = "";
         for (let i = 0; i < yourDragons.length; i++) {
-            let dragonId = yourDragons[i];
-            let fakeJSX = `<div id="dragon-${dragonId}" class="your-dragon"><img src="${baseDragonImageURI}${dragonId}.png"><p class="dragon-id">#${dragonId}</p></div>`
+            let dragonId = Number(yourDragons[i]);
+            let extension;
+            if (legendaries.includes(dragonId)) {
+                extension = "gif";
+            }
+            else {
+                extension = "png";
+            }
+            let fakeJSX = `<div id="dragon-${dragonId}" class="your-dragon"><img src="${baseDragonImageURI}${dragonId}.${extension}"><p class="dragon-id">#${dragonId}</p></div>`
             batchDragonJSX += fakeJSX;
         };
         $("#available-dragon-images").append(batchDragonJSX);
