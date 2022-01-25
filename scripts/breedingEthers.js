@@ -19,7 +19,7 @@ const babiesAbi = () => {
 
 const etherscanBase = `https://etherscan.io/tx/`;
 
-const baseDragonImageURI = "https://ipfs.io/ipfs/Qmc6nJoGdMEA1hRwsrgykU8H15HjDh96aRfZYJ2EoYUdBU/";
+const baseDragonImageURI = "https://ipfs.io/ipfs/QmdcTvM3cHZuFv4YQ3uhRYvfeBvYnqrXXEpjiPgKrFRySS/";
 
 const baseBabyImageURI = "https://ipfs.io/ipfs/QmdJAUPAcYUVqyqGebUw33tK2bkdkaJYr3sgsATGf436ta/";
 
