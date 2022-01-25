@@ -19,7 +19,7 @@ const eldersAbi = () => {
 
 const etherscanBase = `https://etherscan.io/tx/`;
 
-const baseDragonImageURI = "https://ipfs.io/ipfs/QmUwrAd3uRMTm9AHZnJz5a2TSvNAoNvPe5F9uuYi1i6X8a/";
+const baseDragonImageURI = "https://ipfs.io/ipfs/QmakDCtVhXXAn6LNTSnWn8z6gofL2NLXq5bK6f9aG44wva/";
 
 const baseElderImageURI = "https://ipfs.io/ipfs/QmQPVxvop9q9oWEYXpLapPFUt8kwScMb4ACKppEqxcqcyx/";
     
