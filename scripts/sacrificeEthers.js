@@ -215,7 +215,7 @@ const loadDragonImages = async() => {
     dragonsInWallet = await getDragonsOwned();
     for (let i = 0; i < dragonsInWallet.length; i++) {
         let id = Number(dragonsInWallet[i]);
-        dragonImages.set(id, `${baseDragonImageURI}${id}.gif`);
+        dragonImages.set(id, `${baseDragonImageURI}${id}.png`);
     }
 
     dragonImageSelectLoaded = true;

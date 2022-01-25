@@ -224,7 +224,7 @@ const getDragonImages = async()=>{
         let batchDragonJSX = "";
         for (let i = 0; i < yourDragons.length; i++) {
             let dragonId = yourDragons[i];
-            let fakeJSX = `<div id="dragon-${dragonId}" class="your-dragon"><img src="${baseDragonImageURI}${dragonId}.gif"><p class="dragon-id">#${dragonId}</p></div>`
+            let fakeJSX = `<div id="dragon-${dragonId}" class="your-dragon"><img src="${baseDragonImageURI}${dragonId}.png"><p class="dragon-id">#${dragonId}</p></div>`
             batchDragonJSX += fakeJSX;
         };
         $("#available-dragon-images").append(batchDragonJSX);
