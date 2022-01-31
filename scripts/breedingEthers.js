@@ -53,7 +53,8 @@ const baseDragonImageURI = "https://ipfs.io/ipfs/QmUwrAd3uRMTm9AHZnJz5a2TSvNAoNv
 const baseBabyImageURI = "https://ipfs.io/ipfs/QmdJAUPAcYUVqyqGebUw33tK2bkdkaJYr3sgsATGf436ta/";
 
 const correctChain = 4;
-    
+
+const legendaries = [];
 
 /*********************************END CONFIG************************************/
 

@@ -67,7 +67,8 @@ const baseBabyImageURI = "https://ipfs.io/ipfs/QmdJAUPAcYUVqyqGebUw33tK2bkdkaJYr
 const baseElderImageURI = "https://ipfs.io/ipfs/QmQPVxvop9q9oWEYXpLapPFUt8kwScMb4ACKppEqxcqcyx/";
 
 const correctChain = 4;
-    
+
+const legendaries = [];
 
 /*********************************END CONFIG************************************/
 
