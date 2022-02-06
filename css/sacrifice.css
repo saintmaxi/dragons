@@ -266,6 +266,21 @@ h2 {
     border: solid 5px red !important;
 }
 
+#loading-popup {
+    border: solid .3em white;
+	background-color: rgba(95, 92, 92);
+    padding:5vw;
+    z-index: 99999;
+    position:fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 33vw;
+    border-radius: .2em;
+    text-align: center;
+    box-shadow: 0 0 5000px 5000px rgba(0,0,0,0.88);
+}
+
 #dragon-select {
 	background-color: rgba(95, 92, 92);
     border: .2em solid white;
@@ -387,6 +402,10 @@ h2 {
     }
 
 @media screen and (max-width: 991px) {
+
+    #loading-popup {
+        width: 75vw;
+    }
 
     #dragon-select h1 {
         padding-top: 2.5vh;

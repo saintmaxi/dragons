@@ -19,9 +19,9 @@
 
 // const etherscanBase = `https://etherscan.io/tx/`;
 
-// const baseDragonImageURI = "https://ipfs.io/ipfs/QmdcTvM3cHZuFv4YQ3uhRYvfeBvYnqrXXEpjiPgKrFRySS/";
+// const baseDragonImageURI = "https://ipfs.io/ipfs/QmeuKLeLSYVwm3zLitphA8s78WjBbCsbAXaj2pq3dyPXxY/";
 
-// const baseElderImageURI = "https://ipfs.io/ipfs/QmQPVxvop9q9oWEYXpLapPFUt8kwScMb4ACKppEqxcqcyx/";
+// const baseElderImageURI = "https://ipfs.io/ipfs/QmVgujpUaLQ96CTaZW8zTu6U8xXjnu9yQyz7ctVWMncuPj/";
     
 // const correctChain = 1;
 
@@ -50,11 +50,11 @@ const etherscanBase = `https://rinkeby.etherscan.io/tx/`;
 
 const baseDragonImageURI = "https://ipfs.io/ipfs/QmUwrAd3uRMTm9AHZnJz5a2TSvNAoNvPe5F9uuYi1i6X8a/";
 
-const baseElderImageURI = "https://ipfs.io/ipfs/QmQPVxvop9q9oWEYXpLapPFUt8kwScMb4ACKppEqxcqcyx/";
+const baseElderImageURI = "https://ipfs.io/ipfs/QmVgujpUaLQ96CTaZW8zTu6U8xXjnu9yQyz7ctVWMncuPj/";
 
 const correctChain = 4;
-
-const legendaries = [];
+    
+const legendaries = [1,2,3];
 
 /*********************************END CONFIG************************************/
 
@@ -223,7 +223,7 @@ const loadDragonImages = async() => {
             extension = "gif";
         }
         else {
-            extension = "png";
+            extension = "gif";
         }
         dragonImages.set(id, `${baseDragonImageURI}${id}.${extension}`);
     }
@@ -368,6 +368,7 @@ function startLoading(tx) {
     const loadingDiv = `<a href="${etherscanLink}" class="etherscan-link" id="etherscan-link-${txHash}" target="_blank" rel="noopener noreferrer"><div class="loading-div" id="loading-div-${txHash}">PROCESSING<span class="one">.</span><span class="two">.</span><span class="three">.</span>​<br>CLICK FOR ETHERSCAN</div></a><br>`;
     $("#pending-transactions").append(loadingDiv);
     pendingTransactions.add(tx);
+    displayLoading();
 }
 
 async function endLoading(tx, txStatus) {
@@ -384,6 +385,8 @@ async function endLoading(tx, txStatus) {
     $(`#loading-div-${txHash}`).append(`TRANSACTION ${status}.<br>VIEW ON ETHERSCAN.`);
     await sleep(7000);
     $(`#etherscan-link-${txHash}`).remove();
+    $("#loading-popup").remove();
+    $("#block-screen-loading").remove();
     pendingTransactions.delete(tx);
     if (pendingTransactions.size == 0) {
         await loadDragonImages();
