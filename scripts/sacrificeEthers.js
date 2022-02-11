@@ -61,7 +61,7 @@ const legendaries = [1,2,3];
 if (window.ethereum == undefined) {
     displayErrorMessage('Use a web3 enabled browser with MetaMask or the MetaMask mobile app to sacrifice!');
     $("#available-elder-images").empty();
-    $("#available-elder-images").append("<br><p class='no-dragons-msg'>No Ancients available...</p>");
+    $("#available-elder-images").append("<br><p>No Ancients available...</p>");
 }
 
 const provider = new ethers.providers.Web3Provider(window.ethereum,"any");
@@ -173,7 +173,7 @@ const getDragonImages = async()=>{
     const yourEldersCount = await getEldersEnum();
     $("#num-elders").html(`(${Number(yourEldersCount)})`);
     if (yourEldersCount == 0) {
-        $("#available-elder-images").append("<br><p class='no-dragons-msg'>No Ancients available...</p>");
+        $("#available-elder-images").append("<br><p>No Ancients available...</p>");
     }
     else {
         const yourElders = await getEldersOwned();

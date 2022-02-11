@@ -61,7 +61,7 @@ const legendaries = [1,2,3];
 if (window.ethereum == undefined) {
     displayErrorMessage('Use a web3 enabled browser with MetaMask or the MetaMask mobile app to breed!');
     $("#available-baby-images").empty();
-    $("#available-baby-images").append("<br><p class='no-dragons-msg'>No babies available...</p>");
+    $("#available-baby-images").append("<br><p>No babies available...</p>");
 }
 
 const provider = new ethers.providers.Web3Provider(window.ethereum,"any");
@@ -163,7 +163,7 @@ const getDragonImages = async()=>{
     const yourBabiesCount = await getBabiesEnum();
     $("#num-babies").html(`(${Number(yourBabiesCount)})`);
     if (yourBabiesCount == 0) {
-        $("#available-baby-images").append("<br><p class='no-dragons-msg'>No Wyrmlings available...</p>");
+        $("#available-baby-images").append("<br><p>No Wyrmlings available...</p>");
     }
     else {
         const yourBabies = await getBabiesOwned();

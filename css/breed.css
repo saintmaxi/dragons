@@ -463,10 +463,6 @@ h2 {
         line-height: 2.7vh !important;
     }
 
-    .no-dragons-msg {
-        font-size: 1.5vh !important;
-    }
-
     .hide-on-desktop {
         display: block !important;
     }
@@ -580,5 +576,6 @@ h2 {
     #error-popup p, #status-popup p {
         font-size: 4vw;
         line-height: 4vw;
+        width: 80%;
     }
 }

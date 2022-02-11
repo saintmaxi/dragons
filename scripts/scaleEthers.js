@@ -75,7 +75,7 @@ const legendaries = [1,2,3];
 if (window.ethereum == undefined) {
     displayErrorMessage('Use a web3 enabled browser with MetaMask or the MetaMask mobile app to claim $SCALE!');
     $("#available-dragon-images").empty();
-    $("#available-dragon-images").append("<br><p class='no-dragons-msg'>No dragons available...</p>");
+    $("#available-dragon-images").append("<br><p>No dragons available...</p>");
 }
 
 const provider = new ethers.providers.Web3Provider(window.ethereum,"any");
@@ -220,7 +220,7 @@ const getDragonImages = async()=>{
     const yourDragonsCount = await getDragonsEnum();
     $("#num-genesis").html(`(${Number(yourDragonsCount)})`);
     if (yourDragonsCount == 0) {
-        $("#available-dragon-images").append("<br><p class='no-dragons-msg'>No dragons available...</p>");
+        $("#available-dragon-images").append("<br><p>No dragons available...</p>");
     }
     else {
         const yourDragons = await getDragonsOwned();
@@ -243,7 +243,7 @@ const getDragonImages = async()=>{
     const yourEldersCount = await getEldersEnum();
     $("#num-elders").html(`(${Number(yourEldersCount)})`);
     if (yourEldersCount == 0) {
-        $("#available-elder-images").append("<br><p class='no-dragons-msg'>No Ancients available...</p>");
+        $("#available-elder-images").append("<br><p>No Ancients available...</p>");
     }
     else {
         const yourElders = await getEldersOwned();
@@ -259,7 +259,7 @@ const getDragonImages = async()=>{
     const yourBabiesCount = await getBabiesEnum();
     $("#num-babies").html(`(${Number(yourBabiesCount)})`);
     if (yourBabiesCount == 0) {
-        $("#available-baby-images").append("<br><p class='no-dragons-msg'>No Wyrmlings available...</p>");
+        $("#available-baby-images").append("<br><p>No Wyrmlings available...</p>");
     }
     else {
         const yourBabies = await getBabiesOwned();
